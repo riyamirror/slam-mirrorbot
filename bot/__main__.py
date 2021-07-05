@@ -119,33 +119,11 @@ def bot_help(update, context):
 
 /{BotCommands.StatsCommand}: Show Stats of the machine the bot is hosted on
 
-/{BotCommands.PingCommand}: Check how long it takes to Ping the Bot
-
-/{BotCommands.AuthorizeCommand}: Authorize a chat or a user to use the bot (Can only be invoked by Owner & Sudo of the bot)
-
-/{BotCommands.UnAuthorizeCommand}: Unauthorize a chat or a user to use the bot (Can only be invoked by Owner & Sudo of the bot)
-
-/{BotCommands.AuthorizedUsersCommand}: Show authorized users (Only Owner & Sudo)
-
-/{BotCommands.AddSudoCommand}: Add sudo user (Only Owner)
-
-/{BotCommands.RmSudoCommand}: Remove sudo users (Only Owner)
-
-/{BotCommands.RestartCommand}: Restart the bot
-
 /{BotCommands.LogCommand}: Get a log file of the bot. Handy for getting crash reports
-
-/{BotCommands.ConfigMenuCommand}: Get Info Menu about bot config (Owner Only)
-
-/{BotCommands.UpdateCommand}: Update Bot from Upstream Repo (Owner Only)
-
-/{BotCommands.UsageCommand}: To see Heroku Dyno Stats (Owner & Sudo only)
 
 /{BotCommands.SpeedCommand}: Check Internet Speed of the Host
 
 /{BotCommands.MediaInfoCommand}: Get detailed info about replied media (Only for Telegram file)
-
-/{BotCommands.ShellCommand}: Run commands in Shell (Terminal)
 
 /tshelp: Get help for Torrent search module
 '''
@@ -191,7 +169,6 @@ def bot_help(update, context):
 
 
 botcmds = [
-BotCommand(f'{BotCommands.HelpCommand}','Get Detailed Help'),
 BotCommand(f'{BotCommands.MirrorCommand}', 'Start Mirroring'),
 BotCommand(f'{BotCommands.TarMirrorCommand}','Start mirroring and upload as .tar'),
 BotCommand(f'{BotCommands.UnzipMirrorCommand}','Extract files'),
@@ -205,11 +182,8 @@ BotCommand(f'{BotCommands.CancelAllCommand}','Cancel all tasks'),
 BotCommand(f'{BotCommands.ListCommand}','Searches files in Drive'),
 BotCommand(f'{BotCommands.StatusCommand}','Get Mirror Status message'),
 BotCommand(f'{BotCommands.StatsCommand}','Bot Usage Stats'),
-BotCommand(f'{BotCommands.PingCommand}','Ping the Bot'),
 BotCommand(f'{BotCommands.RestartCommand}','Restart the bot [owner/sudo only]'),
-BotCommand(f'{BotCommands.LogCommand}','Get the Bot Log [owner/sudo only]'),
-BotCommand(f'{BotCommands.MediaInfoCommand}','Get detailed info about replied media'),
-BotCommand(f'/tshelp','Get help for Torrent search module')]
+BotCommand(f'{BotCommands.LogCommand}','Get the Bot Log [owner/sudo only]')]
 
 
 def main():
