@@ -153,8 +153,10 @@ class MirrorListener(listeners.MirrorListeners):
                 msg += '\n<b>Type: </b><code>Folder</code>'
                 msg += f'\n<b>SubFolders: </b><code>{folders}</code>'
                 msg += f'\n<b>Files: </b><code>{files}</code>'
+                msg += f'\n\n🛠️Powered By\n✅OnlyFans4uu'
             else:
                 msg += f'\n<b>Type: </b><code>{typ}</code>'
+                msg += f'\n\n🛠️Powered By\n✅OnlyFans4uu'
             buttons = button_build.ButtonMaker()
             if SHORTENER is not None and SHORTENER_API is not None:
                 surl = requests.get(f'https://{SHORTENER}/api?api={SHORTENER_API}&url={link}&format=text').text
@@ -195,7 +197,7 @@ class MirrorListener(listeners.MirrorListeners):
             else:
                 uname = f'<a href="tg://user?id={self.message.from_user.id}">{self.message.from_user.first_name}</a>'
             if uname is not None:
-                msg += f'\n\ncc: {uname}'
+                msg += f'\n\n🤵: {uname}'
             try:
                 fs_utils.clean_download(download_dict[self.uid].path())
             except FileNotFoundError:
